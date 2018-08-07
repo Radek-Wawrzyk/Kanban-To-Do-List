@@ -3,7 +3,7 @@
     <h1 class="navigation-logo">
       <span>Kanban</span> ToDoList
     </h1>
-    <div  class="navigation-panel">
+    <div class="navigation-panel">
       <p class="navigation-panel-user">Fan Node.js</p>
       <button class="navigation-panel-btn">
         <span class="btn-plus">+</span>
@@ -21,4 +21,4 @@ export default {
 
 </script>
 
-<style lang="scss" src="./navigation.scss"/>
+<style lang="scss" src="./navigation.scss" scoped />

@@ -1,39 +1,76 @@
 <template>
-  <script
-
-
-
-  <div id="toDoBox">
-    <div id="toDoList-input">
-      <h1>
-        ToDoList
-      </h1>
-      <div class="inputGroup">
-        <input type="text" class="input-todo" placeholder="    New task">
-        <button class="button">
-          <i class="fas fa-plus"></i>
-        </button>
-      </div>
+  <main>
+    <div class="container">
+      <section class="section">
+        <h2 class="title is-2">Tasks</h2>
+        <div class="columns">
+          <div class="column is-6">
+            <div class="panel">
+              <header class="panel-header">
+                <h3 class="subtitle is-5">Open</h3>
+                <span class="panel-header-counter">2</span>
+              </header>
+              <ul class="panel-items">
+                <li class="item" v-for="task in tasks" :key="task.id" v-if="!task.done">
+                  <a href="#" >
+                    <h4 class="subtitle is-5">{{task.title}}</h4>
+                    <p class="item-description">{{task.description}}</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="column is-6">
+            <div class="panel">
+              <header class="panel-header done">
+                <h3 class="subtitle is-5">Done</h3>
+                <span class="panel-header-counter">1</span>
+              </header>
+              <ul class="panel-items">
+                <li class="item" v-for="task in tasks" :key="task.id" v-if="task.done">
+                  <a href="#" >
+                    <h4 class="subtitle is-5">{{task.title}}</h4>
+                    <p class="item-description">{{task.description}}</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    <div id="ToDoList-items">
-      <ul class="ToDoList">
-        <li class="ToDoListItem"><p>Uratować psa</p>  <i class="fas fa-check"></i></li>
-        <li class="ToDoListItem"><p>Zjeść bananka</p>  <i class="fas fa-check"></i></li>
-        <li class="ToDoListItem"><p>Przeprogramować deski</p>  <i class="fas fa-check"></i></li>
-      </ul>
-    </div>
-  </div>
+  </main>
 </template>
 
 <script>
 
-import axios from "axios"
-
 export default {
-  name: 'Home',
+  name: 'Panel',
   data() {
     return {
-      msg: "Kanban Todolist"
+      tasks: [
+        {
+          id: 0,
+          title: "Eat healthy food",
+          description: "Eat fucking food, cause food is very importantin your life, have a nice diet and what is more importantdo not eat junk food, fast food is good enought, however burgers from MC are fucking unhealthy.",
+          date: "08-08-2018",
+          done: false
+        },
+        {
+          id: 1,
+          title: "Eat healthy food",
+          description: "Eat fucking food, cause food is very importantin your life, have a nice diet and what is more importantdo not eat junk food, fast food is good enought, however burgers from MC are fucking unhealthy.",
+          date: "08-08-2018",
+          done: false
+        },
+        {
+          id: 2,
+          title: "Eat healthy food",
+          description: "Eat fucking food, cause food is very importantin your life, have a nice diet and what is more importantdo not eat junk food, fast food is good enought, however burgers from MC are fucking unhealthy.",
+          date: "08-08-2018",
+          done: true
+        }
+      ]
     }
   }
 }
