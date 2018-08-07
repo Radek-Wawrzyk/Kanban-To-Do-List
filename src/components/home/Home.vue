@@ -1,18 +1,19 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 class="title is-1">{{ msg }}</h1>
   </div>
 </template>
 
 <script>
 
+import axios from "axios"
+
 export default {
-  name: 'Homed',
+  name: 'Home',
   data() {
     return {
       msg: "Kanban Todolist"
     }
-    
   }
 }
 
