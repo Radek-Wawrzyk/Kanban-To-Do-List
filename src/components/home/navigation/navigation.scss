@@ -1,0 +1,66 @@
+@import "@/styles/colors.scss";
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+  &-logo {
+    font-size: 26px;
+    padding: 0 20px;
+    span {
+      color: $primary;
+      font-weight: bold;
+    }
+  }
+  &-panel {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    &-user {
+      margin-right: 15px;
+    }
+    &-btn {
+      height: 100%;
+      width: 140px;
+      border: none;
+      color:white;
+      font-weight: 500;
+      font-size: 16px;
+      text-transform: uppercase;
+      background: #7b68ee;
+      
+      &:hover, &:focus {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//Media
+
+@media screen and (max-width: 768px) {
+  .navigation-panel-btn {
+    width: 60px;
+  }
+  .navigation-logo {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  .btn-content {
+    display: none;
+  }
+  .btn-plus {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navigation-panel-user {
+    display: none;
+  }
+}
