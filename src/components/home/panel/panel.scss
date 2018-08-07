@@ -1,0 +1,105 @@
+/* Panel.vue Todolist */
+#toDoBox{
+    height: auto;
+    width: 640px;
+    background-color: none;
+    margin-left: calc(50% - 320px);
+    margin-top: 3.5em;
+    /*border-left: 3px solid #FC427B;*/
+}
+
+#toDoList-input{
+    width: 640px;
+    height: 250px;
+    text-align: center;
+    background: #25CCF7;
+}
+
+#ToDoList-items{
+    width: 640px;
+    background-color: none;
+    height: auto; 
+}
+
+/* Input group */
+
+#toDoList-input h1{
+    color: #fff;
+    font-family: 'Comfortaa', cursive;
+    font-size: 4em;
+}
+
+.inputGroup{
+    width: 100%;
+    padding: 15px;
+    input{
+        width: 90%;
+        height: 4em;
+        border: none;
+        transition: 0.3s;
+    }
+
+    button{
+        height: 2.65em;
+        width: 10%;
+        background-color: #000;
+        border: none;
+        border-radius: 0%;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+}
+
+/* ToDoList */
+
+.ToDoList{
+    width: 100%;
+    height: auto;
+
+    .ToDoListItem{
+        width: 100%;
+        background: none;
+        margin: 10px 0;
+        min-height: 5em;
+        border: 2px solid #25CCF7;
+        transition: 0.3s;
+        cursor: pointer;
+
+        p{
+            font-size: 30px;
+            font-family: 'Comfortaa', cursive;
+            margin-top: 15px;
+            margin-left: 10px;
+            float: left;
+        }
+
+        i{
+            font-size: 3em;
+            float: right;
+            margin: 15px 20px 0 0;
+            color: #25CCF7;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+    }
+}
+
+/* Hover ToDoList */
+
+.inputGroup input:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.inputGroup button:hover{
+    color: #25CCF7;
+    background-color: #fff;
+}
+
+.ToDoList .ToDoListItem:hover i{
+    color: #ff3838;
+}
+
+.ToDoList .ToDoListItem:hover{
+    border-color: #ff3838;
+}
