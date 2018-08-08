@@ -10,6 +10,12 @@
                 <h3 class="subtitle is-5">Open</h3>
                 <span class="panel-header-counter">{{openTasks.length}}</span>
               </header>
+              <div class="panel-add-task" v-if="openTasks.length <= 0">
+                <p class="panel-add-task-text">You don't have any tasks...</p>
+                <router-link to="add-task" class="button is-primary">
+                  New Task
+                </router-link>
+              </div>
               <ul class="panel-items" >
                 <Task v-for="(task, index) in tasks" :key="index" :task="task" v-if="!task.done"></Task>
               </ul>

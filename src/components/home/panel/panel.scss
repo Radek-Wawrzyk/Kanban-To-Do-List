@@ -6,6 +6,14 @@
   &-columns {
     align-items: flex-start;
   }
+  &-add-task {
+    padding: 25px 0;
+    text-align: center;
+    color: #c5c3c3;
+    &-text {
+      padding: 0 0 15px 0;
+    }
+  }
   &-header {
     background: white;
     display: flex;
