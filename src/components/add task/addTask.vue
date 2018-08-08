@@ -75,6 +75,7 @@ export default {
     addTask() {
       if (this.task.title.length > 1) {
         this.$store.dispatch("addTask",this.task)
+        this.close();
       }
     }
   }
