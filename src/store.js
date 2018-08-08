@@ -43,11 +43,21 @@ export default new Vuex.Store({
   mutations: {
     addTask: (state, task) => {
       state.tasks.push(task);
+    },
+    deleteTask: (state, taskId) => {
+      state.tasks.forEach((task, index) => {
+        if (task.id === taskId) {
+          state.tasks.splice(index, 1);
+        }
+      })
     }
   },
   actions: {
     addTask: (event, task) => {
       event.commit("addTask", task);
+    },
+    deleteTask: (event, taskId) => {
+      event.commit("deleteTask", taskId);
     }
   }
 })

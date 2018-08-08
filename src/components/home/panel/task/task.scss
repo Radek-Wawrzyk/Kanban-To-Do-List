@@ -1,0 +1,22 @@
+@import "@/styles/colors.scss";
+
+.item {
+  margin: 15px 0;
+  background: white;
+  display: block;
+  padding: 10px 15px;
+  color: inherit;
+  border: 1px solid #dbdbdb;
+  transition: border 0.25s;
+  &:focus, &:hover {
+    border-color: $primary;
+  }
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .subtitle {
+    margin: 0 0 10px 0;
+  }
+}
