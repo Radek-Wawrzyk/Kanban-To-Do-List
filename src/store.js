@@ -32,12 +32,22 @@ export default new Vuex.Store({
   getters: {
     tasks: state => {
       return state.tasks;
+    },
+    doneTasks: state => {
+      return state.tasks.filter(task => task.done == true);
+    },
+    openTasks: state => {
+      return state.tasks.filter(task => task.done == false);
     }
   },
   mutations: {
-
+    addTask: (state, task) => {
+      state.tasks.push(task);
+    }
   },
   actions: {
-
+    addTask: (event, task) => {
+      event.commit("addTask", task);
+    }
   }
 })

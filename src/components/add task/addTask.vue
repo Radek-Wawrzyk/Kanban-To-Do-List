@@ -33,7 +33,7 @@
           </form>
         </section>
         <footer class="modal-card-foot">
-          <button class="button is-primary">Create Task</button>
+          <button class="button is-primary" @click="addTask">Create Task</button>
           <button class="button" @click="close">Cancel</button>
         </footer>
       </div>
@@ -52,6 +52,7 @@ export default {
         description: "",
         date: new Date(),
         subTask: "",
+        done: false,
         subList: []
       }
     }
@@ -63,7 +64,6 @@ export default {
         const subtask = {
           name: this.task.subTask,
           done: false,
-          edit: false
         };
         this.task.subList.push(subtask);
         this.task.subTask = "";
@@ -71,6 +71,11 @@ export default {
     },
     close() {
       this.$router.go(-1);
+    },
+    addTask() {
+      if (this.task.title.length > 1) {
+        this.$store.dispatch("addTask",this.task)
+      }
     }
   }
 }

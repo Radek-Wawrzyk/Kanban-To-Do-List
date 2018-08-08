@@ -8,7 +8,7 @@
             <div class="panel">
               <header class="panel-header">
                 <h3 class="subtitle is-5">Open</h3>
-                <span class="panel-header-counter">2</span>
+                <span class="panel-header-counter">{{openTasks.length}}</span>
               </header>
               <ul class="panel-items">
                 <li class="item" v-for="task in tasks" :key="task.id" v-if="!task.done">
@@ -23,8 +23,8 @@
           <div class="column is-6">
             <div class="panel">
               <header class="panel-header done">
-                <h3 class="subtitle is-5">Done</h3>
-                <span class="panel-header-counter">1</span>
+                <h3 class="subtitle is-5">Done </h3>
+                <span class="panel-header-counter">{{doneTasks.length}}</span>
               </header>
               <ul class="panel-items">
                 <li class="item" v-for="task in tasks" :key="task.id" v-if="task.done">
@@ -46,6 +46,7 @@
 <script>
 
 import AddTask from "@/components/add task/addTask.vue"
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'Panel',
@@ -53,10 +54,19 @@ export default {
     AddTask
   },
   computed: {
-    tasks() {
-      return this.$store.getters.tasks;
-    }
-  }
+    ...mapGetters([
+      "tasks",
+      "doneTasks",
+      "openTasks"
+    ])
+  },
+  /*
+  created: function() {
+    let tasks = this.$store.state.tasks;
+
+    let newTask = tasks.filter(xd => xd.done == 1);
+    console.log(newTask)
+  } */
 }
 
 </script>
