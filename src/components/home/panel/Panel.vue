@@ -39,13 +39,19 @@
         </div>
       </section>
     </div>
+    <router-view></router-view>
   </main>
 </template>
 
 <script>
 
+import AddTask from "@/components/add task/addTask.vue"
+
 export default {
   name: 'Panel',
+  components: {
+    AddTask
+  },
   data() {
     return {
       tasks: [

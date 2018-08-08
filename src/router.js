@@ -12,12 +12,20 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: () => import("@/components/home/Home.vue")
+      component: () => import("@/components/home/Home.vue"),
+      children: [
+        {
+          path: "add-task",
+          name: "AddTask",
+          component: () => import("@/components/add task/addTask.vue")
+        }
+      ]
     },
     {
       path: "/login",
       name: "Login",
       component: () => import("@/components/login/Login.vue")
-    }
+    },
+    
   ]
 })

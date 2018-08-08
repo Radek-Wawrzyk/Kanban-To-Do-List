@@ -2,6 +2,18 @@
 
 @import "./bulma/bulma";
 
+//Animations
+
+@import "./animations";
+
+//Global modifers
+
 html {
   background: #eeeeee;
+}
+.button.is-primary {
+  background: #7b68ee;
+  &:hover, &:focus {
+    background: #8976f1;
+  }
 }

@@ -32,7 +32,9 @@
       font-size: 16px;
       text-transform: uppercase;
       background: #7b68ee;
-      
+      display: flex;
+      justify-content: center;
+      align-items: center;
       &:hover, &:focus {
         cursor: pointer;
       }
