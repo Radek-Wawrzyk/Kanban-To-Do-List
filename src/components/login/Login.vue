@@ -1,9 +1,17 @@
 <template>
-  <section class="section">
     <div class="container is-fluid">
       <div class="columns">
-        <div class="left-side-bar column is-4 is-marginless"></div>
-
+        <!-- Left Side -->
+        <div class="left-side-bar has-text-centered column is-3 is-marginless">
+          <div class="top">
+            <span class="title is-1">Kanban</span>
+          </div>  
+          <div>
+            <span class="tag is-danger">Comming Soon</span>
+          </div>
+          <img src="./web-design.png">
+        </div>
+        <!-- Right Side -->
         <form class="form right-side column is-3">
           <span class="subtitle is-4">Log in to Kanban</span>
 
@@ -20,10 +28,11 @@
           <div class="field">
             <label class="label" for="password">Password</label>
             <div class="control has-icons-left">
-              <span class="icon">
+              <span class="icon is-left">
                 <i class="fas fa-lock"></i>
               </span>
               <input class="input is-radiusless" type="password" id="password" name="password" placeholder="Password" v-model="user.password">
+              <a href="#" class="forgot-pass">Forgot password?</a>
             </div>
           </div>
 
@@ -35,7 +44,6 @@
         </form>
       </div>
     </div>
-  </section>
 </template>
 
 <script>

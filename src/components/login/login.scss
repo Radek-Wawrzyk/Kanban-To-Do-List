@@ -1,5 +1,13 @@
 .right-side{
     height: 100%;
+    padding: 10px;
+    margin: 10px;
+
+
+    .forgot-pass{
+        float: right;
+        margin-top: -35px;
+    }
 
     a{
         color: #7b68ee;
@@ -7,6 +15,8 @@
     }
 
     .field{
+        margin-top: 25px;
+
         .label{
             color: #7b68ee;
         }
@@ -28,9 +38,50 @@
         width: 100%;
         height: 60px;
     }
+
+    @media screen and (min-width: 1097px){
+        margin-top: 15%;
+        margin-left: 25%;
+    }
 }
 
 .left-side-bar{
     background: #7b68ee;
-    height: 110vh;
+    height: 100.9vh;
+    padding-top: 70px;
+
+    @media screen and (max-width: 1560px){
+        width: 40%;
+    }
+
+    @media screen and (max-width: 1097px){
+        width: 100%;
+    }
+
+    @media screen and (max-width: 769px){
+        width: 100%;
+    }
+
+    span{
+        color: #fff;
+        font-family: 'Comfortaa', cursive;
+        font-weight: 700;
+        padding: 20px;
+    }
+
+    .tag{
+        margin-top: 50%;
+        margin-left: -250px;
+    }
+
+    img{
+        height: 300px;
+        width: auto;
+        margin-top: 50px;
+    }
+}
+
+.container{
+    margin: 0;
+    padding: 0;
 }
