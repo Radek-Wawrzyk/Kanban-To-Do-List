@@ -37,7 +37,7 @@
           <div class="field">
             <label class="label" for="login">Mail</label>
             <div class="control has-icons-left">
-              <input class="input is-radiusless" type="email" id="email" name="email" placeholder="sample卐@hitler.xd" required>
+              <input class="input is-radiusless" type="email" id="email" name="email" placeholder="sample@mail.com" required>
               <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
               </span>
