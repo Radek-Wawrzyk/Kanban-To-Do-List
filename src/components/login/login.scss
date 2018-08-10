@@ -3,12 +3,6 @@
     padding: 10px;
     margin: 10px;
 
-
-    .forgot-pass{
-        float: right;
-        margin-top: -35px;
-    }
-
     a{
         color: #7b68ee;
         text-decoration: none;
@@ -39,9 +33,13 @@
         height: 60px;
     }
 
-    @media screen and (min-width: 1097px){
+    @media screen and (min-width: 768px){
         margin-top: 15%;
         margin-left: 25%;
+    }
+
+    @media screen and (max-width: 1560px){
+        margin-left: 10%;
     }
 }
 
@@ -56,10 +54,12 @@
 
     @media screen and (max-width: 1097px){
         width: 100%;
+        height: 138.8vh;
     }
 
     @media screen and (max-width: 769px){
         width: 100%;
+        height: 110vh;
     }
 
     span{
@@ -70,16 +70,84 @@
     }
 
     .tag{
-        margin-top: 50%;
-        margin-left: -250px;
+        margin-top: 40%;
+        margin-left: -180px;
+        text-transform: uppercase;
+        @media screen and (max-width: 769px){
+            margin-top: 10%;
+            margin-left: 0;
+        }
     }
 
     img{
         height: 300px;
         width: auto;
         margin-top: 50px;
+
+        @media screen and (max-width: 769px){
+            height: 150px;
+        }
+    }
+
+    .subtitle-text-left{
+        margin-top: 25px;
+        text-align: left !important;
+        margin-left: 22%;
+        font-family: 'Comfortaa', cursive;
+        font-size: 1.5em;
+
+
+        @media screen and (max-width: 769px){
+            margin-left: 80px;
+        }
     }
 }
+
+.bottom{
+    margin-top: 45%;
+}
+
+.bottom-line{
+    width: 40%;
+    height: 2px;
+    background: #fff;
+    margin-left: calc(50% - 20%);
+}
+
+.social{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 60px;
+    transition: 0.3s;
+
+    span{
+        font-weight: 100;
+        color: #ccc;
+        margin-left: -12px;
+        transition: 0.4s;
+
+        a{
+            text-decoration: none;
+            color: #ccc;
+        }
+    }
+
+    i{
+        transition: 0.5s;
+    }
+}
+
+.social:hover{
+    span{
+        margin-left: -5px;
+    }
+
+    i{
+        color: #000;
+    }
+}
+
+
 
 .container{
     margin: 0;

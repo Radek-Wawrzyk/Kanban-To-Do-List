@@ -16,13 +16,17 @@
           <div class="bottom">
             <div class="bottom-line"></div>
             <div class="columns">
-              <div class="column social is-desktop-12 is-mobile-12"><i class="fab fa-github"></i> <span class="social-text"><a href="#">GitHub</a></span></div>
+              <div class="column social is-desktop-4 is-mobile-12"><i class="fab fa-github"></i> <span class="social-text"><a href="#">GitHub</a></span></div>
+
+              <div class="column social is-desktop-4 is-mobile-12"><i class="fab fa-slack-hash"></i> <span class="social-text"><a href="#">Slack</a></span></div>
+
+              <div class="column social is-desktop-4 is-mobile-12"><i class="fab fa-gitlab"></i> <span class="social-text"><a href="#">GitLub</a></span></div>
             </div>
           </div>
         </div>
         <!-- Right Side -->
         <form class="form right-side column is-3">
-          <span class="subtitle is-4">Log in to Kanban</span>
+          <span class="subtitle is-4">Register in to Kanban</span>
 
           <div class="field">
             <label class="label" for="login">Login</label>
@@ -48,7 +52,7 @@
             <button class="button is-primary" @click="submit">Login</button>
           </div>
 
-          <div class="has-text-centered"><span>or</span> <p style="color: #7b68ee;"><a href="../register/Register.vue">Sign Up</a></p></div>
+          <div class="has-text-centered"><span>or</span> <p style="color: #7b68ee;"><a href="#">Log In</a></p></div>
         </form>
       </div>
     </div>
