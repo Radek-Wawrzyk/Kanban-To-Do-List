@@ -1,9 +1,9 @@
 .right-side{
     height: 100%;
-    padding: 10px;
     margin: 10px;
     background: #fff;
-    padding: 20px;
+    padding: 60px;
+    box-shadow: #ccc 1px 5px 30px 1px;
 
     a{
         color: #7b68ee;
@@ -36,7 +36,7 @@
     }
 
     @media screen and (min-width: 768px){
-        margin-top: 15%;
+        margin-top: 12%;
         margin-left: 25%;
     }
 
