@@ -25,7 +25,7 @@
               <label class="label">Subtask</label>
               <input class="input" type="text" placeholder="Add task" v-model="task.subTask" @keyup.enter="addSubTask">
               <ul>
-                <li v-for="task in task.subList" :key="task.name" @click="task.edit = true">
+                <li v-for="task in task.subTasks" :key="task.name" @click="task.edit = true">
                   <input class="input" type="text" v-model="task.name">
                 </li>
               </ul>
@@ -53,7 +53,7 @@ export default {
         date: new Date(),
         subTask: "",
         done: false,
-        subList: []
+        subTasks: []
       }
     }
   },
@@ -65,7 +65,7 @@ export default {
           name: this.task.subTask,
           done: false,
         };
-        this.task.subList.push(subtask);
+        this.task.subTasks.push(subtask);
         this.task.subTask = "";
       }
     },

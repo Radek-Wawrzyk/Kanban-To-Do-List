@@ -42,10 +42,16 @@
     transition: opacity 0.25s;
   }
   .subtitle {
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
+    font-weight: 500;
   }
   .delete {
     opacity: 0;
     transition: opacity 0.25s;
+  }
+  &-sub-counter {
+    color: #b1b1b1;
+    font-size: 13px;
+    margin: 0 0 5px 0;
   }
 }

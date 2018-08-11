@@ -11,21 +11,57 @@ export default new Vuex.Store({
         title: "Wash dishes",
         description: "After return i have to wash dishes, cause my mother yelling at me, and it's annoying ",
         date: "08-08-2018",
-        done: false
+        done: false,
+        subTasks: [
+          {
+            id: 234,
+            name: "Back to home",
+            done: false
+          },
+          {
+            id: 235,
+            name: "Wash dishes",
+            done: false
+          }
+        ]
       },
       {
         id: 1,
         title: "Clean my room",
         description: "My room is not tidy - it's fucking mess! I must clean all the faps piece of paper",
         date: "08-08-2018",
-        done: false
+        done: false,
+        subTasks: [
+          {
+            id: 236,
+            name: "Back to home",
+            done: false
+          },
+          {
+            id: 237,
+            name: "Tidy my mess room",
+            done: false
+          }
+        ]
       },
       {
         id: 2,
         title: "Slay all jews on the world",
         description: "Jews are not have rights to life, they should be eliminated as fast it's possible ",
         date: "08-08-2018",
-        done: true
+        done: true,
+        subTasks: [
+          {
+            id: 238,
+            name: "Prepare plan for jews anihilation",
+            done: false
+          },
+          {
+            id: 239,
+            name: "execute the plan",
+            done: false
+          }
+        ]
       }
     ]
   },
