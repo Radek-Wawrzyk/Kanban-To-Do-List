@@ -22,3 +22,13 @@
 .modal-card-title {
   line-height: inherit;
 }
+
+//Sub Tasks
+
+.sub-task {
+  display: flex;
+  justify-content: space-between;
+  span {
+    cursor: pointer;
+  }
+}

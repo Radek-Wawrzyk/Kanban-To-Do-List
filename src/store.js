@@ -16,12 +16,14 @@ export default new Vuex.Store({
           {
             id: 234,
             name: "Back to home",
-            done: false
+            done: false,
+            edit: false
           },
           {
             id: 235,
             name: "Wash dishes",
-            done: false
+            done: false,
+            edit: false
           }
         ]
       },
@@ -35,12 +37,14 @@ export default new Vuex.Store({
           {
             id: 236,
             name: "Back to home",
-            done: false
+            done: false,
+            edit: false
           },
           {
             id: 237,
             name: "Tidy my mess room",
-            done: false
+            done: false,
+            edit: false
           }
         ]
       },
@@ -54,12 +58,14 @@ export default new Vuex.Store({
           {
             id: 238,
             name: "Prepare plan for jews anihilation",
-            done: false
+            done: false,
+            edit: false
           },
           {
             id: 239,
             name: "execute the plan",
-            done: false
+            done: false,
+            edit: false
           }
         ]
       }

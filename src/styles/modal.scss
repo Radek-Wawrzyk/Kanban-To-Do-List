@@ -1,0 +1,48 @@
+//Sub Tasks
+
+.sub-task {
+  display: flex;
+  justify-content: space-between;
+  &-left, &-right {
+    display: flex;
+    align-items: center;
+  }
+  &-name {
+    margin: 0 0 0 15px;
+    &.is-active {
+      text-decoration: line-through;
+    }
+  }
+  span {
+    cursor: pointer;
+
+  }
+}
+
+//Checkboxes
+
+.sub-task-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid $primary;
+  background: white;
+  color: white;
+  transition: color 0.25s, background 0.25s;
+  cursor: pointer;
+  span {
+    opacity: 0;
+    transition: opacity 0.15s;
+    font-size: 10px;
+  }
+  &.is-active {
+    background: $primary;
+    color: white;
+    span {
+      opacity: 1;
+    }
+  }
+}

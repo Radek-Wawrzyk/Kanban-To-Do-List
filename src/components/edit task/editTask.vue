@@ -32,12 +32,25 @@
             <div class="field">
               <label class="label">Subtask</label>
               <input class="input" type="text" placeholder="Add task" v-model="task.subTask" @keyup.enter="addSubTask">
-              <ul>
-                <li v-for="task in task.subList" :key="task.name" @click="task.edit = true">
-                  <input class="input" type="text" v-model="task.name">
-                </li>
-              </ul>
             </div>
+            <ul class="sub-task-list">
+              <li class="field" v-for="task in task.subTasks" :key="task.name">
+                <div class="sub-task">
+                  <div class="sub-task-left">
+                    <button class="sub-task-checkbox" :class="{'is-active': task.done}" type="button" @click="task.done =! task.done">
+                      <span class="fas fa-check"></span>
+                    </button>
+                    <p class="sub-task-name" :class="{'is-active': task.done}">{{task.name}}</p>
+                  </div>
+                  <div class="sub-task-right">
+                    <span class="fas fa-pencil-alt" @click="task.edit =! task.edit"></span>
+                  </div>
+                </div>
+                <div class="control" v-if="task.xd">
+                  <input class="input" type="text" v-model="task.name">
+                </div>
+              </li>
+            </ul>
           </form>
         </section>
         <footer class="modal-card-foot">
@@ -67,6 +80,17 @@ export default {
     },
     done() {
       this.task.done =! this.task.done;
+    },
+    addSubTask() {
+      if (this.task.subTask.length > 0) {
+        
+        const subtask = {
+          name: this.task.subTask,
+          done: false,
+        };
+        this.task.subTasks.push(subtask);
+        this.task.subTask = "";
+      }
     }
   },
   created: function() {
