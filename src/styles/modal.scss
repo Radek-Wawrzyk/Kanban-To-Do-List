@@ -46,3 +46,25 @@
     }
   }
 }
+
+.modal-edit {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.buttons-group {
+  margin: 0 10px 0 0;
+}
+
+//Media
+
+@media screen and (max-width: 420px) {
+  .modal-edit {
+    justify-content: center;
+  }
+  .buttons-group {
+    margin: 0 0 15px 0;
+    width: 100%;
+    text-align: center
+  }
+}

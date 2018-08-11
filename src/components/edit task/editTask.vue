@@ -53,9 +53,12 @@
             </ul>
           </form>
         </section>
-        <footer class="modal-card-foot">
-          <button class="button is-primary" @click="editTask">Edit task</button>
-          <button class="button" @click="close">Cancel</button>
+        <footer class="modal-card-foot modal-edit">
+          <div class="buttons-group">
+            <button class="button is-primary" @click="editTask">Edit task</button>
+            <button class="button" @click="close">Cancel</button>
+          </div>
+          <button class="button is-danger is-right" @click="deleteTask">Delete</button>
         </footer>
       </div>
     </div>
@@ -91,6 +94,9 @@ export default {
         this.task.subTasks.push(subtask);
         this.task.subTask = "";
       }
+    },
+    deleteTask() {
+      this.$store.dispatch("deleteTask", this.task.id).then(this.close());
     }
   },
   created: function() {
