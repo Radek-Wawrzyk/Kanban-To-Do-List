@@ -4,7 +4,15 @@
       <div class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
-          <p class="modal-card-title">Edit Task</p>
+          <p class="modal-card-title">
+            Edit Task
+            <button class="button button-accept" :class="{'done': task.done}" @click="done">
+              <span class="icon is-small">
+                <i class="fas fa-check"></i>
+              </span>
+              <span>Done</span>
+           </button>
+          </p>
           <button class="delete" aria-label="close" @click="close"></button>
         </header>
         <section class="modal-card-body">
@@ -44,7 +52,7 @@
 <script>
 
 export default {
-  name: "AddTask",
+  name: "editTask",
   data() {
     return {
       task: {}
@@ -56,6 +64,9 @@ export default {
     },
     editTask() {
       this.$store.dispatch("editTask", this.task).then(this.close);
+    },
+    done() {
+      this.task.done =! this.task.done;
     }
   },
   created: function() {
@@ -65,3 +76,5 @@ export default {
 }
 
 </script>
+
+<style lang="scss" src="./editTask.scss"  />
