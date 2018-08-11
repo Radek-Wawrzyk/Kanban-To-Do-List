@@ -10,13 +10,42 @@
   transition: border 0.25s;
   &:focus, &:hover {
     border-color: $primary;
+    .item-button, a, .delete {
+      opacity: 1;
+    }
   }
-  &-title {
+  &-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  &-settings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      margin: 0 10px 0 0;
+      font-size: 20px;
+      cursor: pointer;
+      transition: color 0.25s, opacity 0.25s;
+      color: inherit;
+      opacity: 0;
+      &:hover, &:focus {
+        color: $primary;
+
+      }
+    }
+  }
+  &-button {
+    margin: 15px 0 0 0;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
   .subtitle {
     margin: 0 0 10px 0;
+  }
+  .delete {
+    opacity: 0;
+    transition: opacity 0.25s;
   }
 }

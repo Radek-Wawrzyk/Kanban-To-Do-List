@@ -8,22 +8,22 @@ export default new Vuex.Store({
     tasks: [
       {
         id: 0,
-        title: "Eat healthy food",
-        description: "Eat fucking food, cause food is very importantin your life, have a nice diet and what is more importantdo not eat junk food, fast food is good enought, however burgers from MC are fucking unhealthy.",
+        title: "Wash dishes",
+        description: "After return i have to wash dishes, cause my mother yelling at me, and it's annoying ",
         date: "08-08-2018",
         done: false
       },
       {
         id: 1,
-        title: "Eat healthy food",
-        description: "Eat fucking food, cause food is very importantin your life, have a nice diet and what is more importantdo not eat junk food, fast food is good enought, however burgers from MC are fucking unhealthy.",
+        title: "Clean my room",
+        description: "My room is not tidy - it's fucking mess! I must clean all the faps piece of paper",
         date: "08-08-2018",
         done: false
       },
       {
         id: 2,
-        title: "Eat healthy food",
-        description: "Eat fucking food, cause food is very importantin your life, have a nice diet and what is more importantdo not eat junk food, fast food is good enought, however burgers from MC are fucking unhealthy.",
+        title: "Slay all jews on the world",
+        description: "Jews are not have rights to life, they should be eliminated as fast it's possible ",
         date: "08-08-2018",
         done: true
       }
@@ -50,6 +50,11 @@ export default new Vuex.Store({
           state.tasks.splice(index, 1);
         }
       })
+    },
+    editTask: (state, task) => {
+      let currentTask = state.tasks.find(item => item.title = task.title);
+      
+      currentTask = task;
     }
   },
   actions: {
@@ -58,6 +63,9 @@ export default new Vuex.Store({
     },
     deleteTask: (event, taskId) => {
       event.commit("deleteTask", taskId);
+    },
+    editTask: (event, task) => {
+      event.commit("editTask", task);
     }
   }
 })

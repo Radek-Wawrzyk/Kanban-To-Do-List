@@ -18,6 +18,11 @@ export default new Router({
           path: "add-task",
           name: "AddTask",
           component: () => import("@/components/add task/addTask.vue")
+        },
+        {
+          path: "edit-task/:title",
+          name: "editTask",
+          component: () => import("@/components/edit task/editTask.vue")
         }
       ]
     },
