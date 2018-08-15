@@ -30,26 +30,18 @@
               </div>
             </div>
             <div class="field">
-              <label class="label">Subtask</label>
-              <input class="input" type="text" placeholder="Add task" v-model="task.subTask" @keyup.enter="addSubTask">
+              <label class="label">Subtasks</label>
+            </div>
+            <div class="field has-addons">
+              <div class="control add-sub-task">
+                <input class="input" type="text" placeholder="Add task" v-model="task.subTask" @keyup.enter="addSubTask">
+              </div>
+              <div class="control">
+                <button type="button" class="button is-primary" @click="addSubTask">Add task</button>
+              </div>
             </div>
             <ul class="sub-task-list">
-              <li class="field" v-for="task in task.subTasks" :key="task.name">
-                <div class="sub-task">
-                  <div class="sub-task-left">
-                    <button class="sub-task-checkbox" :class="{'is-active': task.done}" type="button" @click="task.done =! task.done">
-                      <span class="fas fa-check"></span>
-                    </button>
-                    <p class="sub-task-name" :class="{'is-active': task.done}">{{task.name}}</p>
-                  </div>
-                  <div class="sub-task-right">
-                    <span class="fas fa-pencil-alt" @click="task.edit =! task.edit"></span>
-                  </div>
-                </div>
-                <div class="control" v-if="task.xd">
-                  <input class="input" type="text" v-model="task.name">
-                </div>
-              </li>
+              <subTask class="field" v-for="(subTask, index) in task.subTasks" :key="index" :subTask="subTask"></subTask>
             </ul>
           </form>
         </section>
@@ -67,8 +59,13 @@
 
 <script>
 
+import subTask from "./sub task/subTask.vue"
+
 export default {
   name: "editTask",
+  components: {
+    subTask
+  },
   data() {
     return {
       task: {}

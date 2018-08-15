@@ -1,22 +1,59 @@
 //Sub Tasks
 
 .sub-task {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  height: 36px;
+  &:hover {
+    .sub-task-right span {
+      opacity: 1;
+    }
+  }
   &-left, &-right {
     display: flex;
     align-items: center;
   }
+  &-right {
+    span {
+      opacity: 0;
+      transition: color 0.25s, opacity 0.15s;
+      &:last-of-type {
+        margin: 0 0 0 15px;
+        &:hover {
+          color: #ff3860;
+        }
+      }
+      &:first-of-type {
+        &:hover {
+          color: #ff8957;
+        }
+      }
+    }
+  }
   &-name {
-    margin: 0 0 0 15px;
+    margin: 0 0 0 25px;
     &.is-active {
       text-decoration: line-through;
     }
   }
   span {
     cursor: pointer;
-
   }
+  &-edit {
+    position: absolute;
+    left: 35px;
+    height: 40px;
+    width: calc(100% - 76px);
+    span {
+      color: red;
+    }
+  }
+}
+
+.control.has-icons-right .icon.is-right {
+  cursor: pointer;
+  z-index: 100;
 }
 
 //Checkboxes
@@ -54,6 +91,12 @@
 }
 .buttons-group {
   margin: 0 10px 0 0;
+}
+
+//Add sub task
+
+.add-sub-task {
+  width: 100%;
 }
 
 //Media
