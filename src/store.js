@@ -93,6 +93,15 @@ export default new Vuex.Store({
         }
       })
     },
+    deleteSubTask: (state, taskName) => {
+      state.tasks.forEach(task => {
+        task.subTasks.forEach((item, index) => {
+          if (item.name === taskName) {
+            task.subTasks.splice(index, 1);
+          }
+        })
+      })
+    },
     editTask: (state, task) => {
       let currentTask = state.tasks.find(item => item.title = task.title);
       
@@ -105,6 +114,9 @@ export default new Vuex.Store({
     },
     deleteTask: (event, taskId) => {
       event.commit("deleteTask", taskId);
+    },
+    deleteSubTask: (event, taskName) => {
+      event.commit("deleteSubTask", taskName);
     },
     editTask: (event, task) => {
       event.commit("editTask", task);
