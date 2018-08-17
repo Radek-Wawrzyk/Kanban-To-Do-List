@@ -8,7 +8,7 @@
     </div>
     <div class="sub-task-right">
       <span class="fas fa-pencil-alt" @click="subTask.edit =! subTask.edit"></span>
-      <span class="far fa-trash-alt"></span>
+      <span class="far fa-trash-alt" @click="deleteSubTask"></span>
     </div>
     <div class="field has-addons" v-if="subTask.edit">
       <div class="control sub-task-edit" >
@@ -28,6 +28,11 @@ export default {
   props: {
     "subTask": Object
   },
+  methods: {
+    deleteSubTask() {
+      this.$emit("deleteSubTask", this.subTask.name);
+    }
+  }
 }
 
 </script>

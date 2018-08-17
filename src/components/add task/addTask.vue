@@ -33,7 +33,7 @@
               </div>
             </div>
             <ul class="sub-task-list">
-              <subTask class="field" v-for="(subTask, index) in task.subTasks" :key="index" :subTask="subTask"></subTask>
+              <subTask class="field" v-on:deleteSubTask="deleteSubTask($event)" v-for="(subTask, index) in task.subTasks" :key="index" :subTask="subTask"></subTask>
             </ul>
           </form>
         </section>
@@ -88,6 +88,13 @@ export default {
         this.$store.dispatch("addTask",this.task)
         this.close();
       }
+    },
+    deleteSubTask(taskName) {
+      this.task.subTasks.forEach((task, index) =>{
+        if (task.name === taskName) {
+          this.task.subTasks.splice(index, 1);
+        }
+      }) 
     }
   }
 }
