@@ -9,7 +9,7 @@ export default new Vuex.Store({
       {
         id: 0,
         title: "Wash dishes",
-        description: "After return i have to wash dishes, cause my mother yelling at me, and it's annoying ",
+        description: "After return to my home, I must to wash dishes",
         date: "08-08-2018",
         done: false,
         subTasks: [
@@ -30,7 +30,7 @@ export default new Vuex.Store({
       {
         id: 1,
         title: "Clean my room",
-        description: "My room is not tidy - it's fucking mess! I must clean all the faps piece of paper",
+        description: "My room is not tidy - it's mess!",
         date: "08-08-2018",
         done: false,
         subTasks: [
@@ -50,20 +50,20 @@ export default new Vuex.Store({
       },
       {
         id: 2,
-        title: "Slay all jews on the world",
-        description: "Jews are not have rights to life, they should be eliminated as fast it's possible ",
+        title: "Wach Star Wars saga and chillout",
+        description: "",
         date: "08-08-2018",
         done: true,
         subTasks: [
           {
             id: 238,
-            name: "Prepare plan for jews anihilation",
+            name: "Prepare plan for great time",
             done: false,
             edit: false
           },
           {
             id: 239,
-            name: "execute the plan",
+            name: "execute order 66",
             done: false,
             edit: false
           }
